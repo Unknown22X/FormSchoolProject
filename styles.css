@@ -236,6 +236,7 @@ body#welcome button {
 
 .feature {
     background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     padding: 10px 20px;
     border-radius: 20px;
@@ -291,18 +292,19 @@ body#thankyou h1 {
 /* Thank you page styles */
 .thankyou-content {
     text-align: center;
-    max-width: 700px;
-    padding: 30px;
+    max-width: 600px;
+    padding: 25px;
     background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-    border-radius: 25px;
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .success-icon {
     font-size: 4rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     animation: bounce 2s infinite;
 }
 
@@ -321,16 +323,110 @@ body#thankyou h1 {
 .thankyou-message {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     line-height: 1.6;
 }
 
-.fun-facts {
+.personal-message {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 15px;
     margin: 25px 0;
     text-align: right;
+}
+
+.personal-message h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.personal-message ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.personal-message li {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.personal-message li::before {
+    content: "💙";
+    position: absolute;
+    right: 0;
+    font-size: 0.8rem;
+}
+
+.fun-facts {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px 0;
+    text-align: right;
+}
+
+.fun-facts h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.fun-facts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fun-facts li {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 6px;
+    padding-right: 20px;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.fun-facts li::before {
+    content: "✓";
+    position: absolute;
+    right: 0;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Tiny Stats - Small rectangles */
+.tiny-stats {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.stat-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+.stat-number {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+.stat-label {
+    font-size: 0.65rem;
+    color: rgba(76, 175, 80, 0.8);
+    font-weight: 500;
 }
 
 .fun-facts h3 {
@@ -345,46 +441,45 @@ body#thankyou h1 {
     margin: 0;
 }
 
-.fun-facts li {
+.personal-message li {
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 8px;
     padding-right: 20px;
     position: relative;
 }
 
-.fun-facts li::before {
-    content: "✓";
+.personal-message li::before {
+    content: "💙";
     position: absolute;
     right: 0;
-    color: #4CAF50;
-    font-weight: bold;
+    font-size: 0.8rem;
 }
 
 .project-info {
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 15px;
-    margin: 25px 0;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px 0;
     text-align: right;
 }
 
 .project-info h3 {
     color: white;
-    margin-bottom: 15px;
-    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
 }
 
 .project-info p {
     color: rgba(255, 255, 255, 0.9);
-    margin: 5px 0;
-    font-size: 1rem;
+    margin: 4px 0;
+    font-size: 0.9rem;
 }
 
 .actions {
     display: flex;
     gap: 15px;
     justify-content: center;
-    margin: 30px 0;
+    margin: 20px 0;
     flex-wrap: wrap;
 }
 
@@ -415,7 +510,7 @@ body#thankyou h1 {
 }
 
 .celebration {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .confetti {
@@ -483,15 +578,70 @@ h1, h2 {
     .thankyou-content {
         padding: 15px;
         margin: 10px;
+        max-width: 95%;
     }
     
     .success-icon {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin-bottom: 15px;
     }
     
-    .fun-facts, .project-info {
+    .thankyou-message {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .fun-facts {
         padding: 15px;
         margin: 15px 0;
+    }
+    
+    .fun-facts h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .fun-facts li {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+    }
+    
+    .project-info {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .project-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-info p {
+        font-size: 0.85rem;
+        margin: 4px 0;
+    }
+    
+    .actions {
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 0;
+    }
+    
+    .home-btn, .another-btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .celebration {
+        margin-top: 15px;
+    }
+    
+    .confetti {
+        font-size: 1.5rem;
+    }
+    
+    .final-message {
+        font-size: 0.9rem;
     }
     
     .actions {
@@ -565,6 +715,24 @@ h1, h2 {
     
     .success-icon {
         font-size: 3rem;
+    }
+    
+    .mini-stats {
+        padding: 8px;
+        margin: 12px 0;
+        gap: 10px;
+    }
+    
+    .stat-item {
+        min-width: 50px;
+    }
+    
+    .stat-number {
+        font-size: 1rem;
+    }
+    
+    .stat-label {
+        font-size: 0.65rem;
     }
     
     .actions {
