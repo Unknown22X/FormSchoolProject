@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شكراً لك!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        // Simple visitor counter animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const counter = document.getElementById('visitor-count');
+            let count = 1000;
+            const target = 1027; // Current count + 27 for this session
+            
+            const interval = setInterval(() => {
+                count += Math.floor(Math.random() * 3) + 1;
+                if (count >= target) {
+                    count = target;
+                    clearInterval(interval);
+                }
+                counter.textContent = count.toLocaleString() + '+';
+            }, 50);
+        });
+    </script>
+</head>
+<body id="thankyou">
+    <!-- background -->
+     <video autoplay muted loop playsinline id="bg-video">
+      <source src="sources/images/Rainy-Night-House-4K.mp4">
+     </video>
+    <!-- content -->
+    <div class="thankyou-content">
+      <div class="success-icon">🎉</div>
+      <h1>شكراً لك على مشاركتك!</h1>
+      <p class="thankyou-message">تم استلام بياناتك بنجاح. نقدر ثقتك بنا ونشكرك على وقتك الثمين.</p>
+
+      <div class="fun-facts">
+        <h3>📈 حقائق ممتعة عن المشاركة:</h3>
+        <ul>
+          <li>🎯 مساهمتك تساعد في تحسين خدماتنا</li>
+          <li>⭐ أنت الزائر رقم <span id="visitor-count">1000+</span> لهذا النموذج!</li>
+          <li>🚀 بياناتك آمنة ومحمية بالكامل</li>
+          <li>💝 شكر خاص لاهتمامك بمشاركتنا</li>
+        </ul>
+      </div>
+
+      <div class="project-info">
+        <h3>👨‍🎓 معلومات المشروع</h3>
+        <p><strong>الطالبة:</strong> جوري نبيل</p>
+        <p><strong>المشروع:</strong> نموذج استطلاع </p>
+        <p><strong>الصف:</strong> اولى ثانوي/5</p>
+        <p><strong>التاريخ:</strong> ديسمبر 2025</p>
+      </div>
+
+      <div class="actions">
+        <button onclick="location.href='index.html'" class="home-btn">🏠 العودة للرئيسية</button>
+        <button onclick="location.href='form.html'" class="another-btn">📝 تعبئة نموذج آخر</button>
+      </div>
+
+      <div class="celebration">
+        <div class="confetti">✨ 🎊 🎉 ✨</div>
+        <p class="final-message">نشكرك مرة أخرى! 🎈</p>
+      </div>
+    </div>
+</body>
+</html>

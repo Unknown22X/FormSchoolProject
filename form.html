@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نموذج الاستطلاع</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+  </head>
+
+  <body>
+    <!-- background -->
+     <video autoplay muted loop playsinline id="bg-video">
+      <source src="sources/images/Rainy-Night-House-4K.mp4">
+     </video>
+    <!-- content -->
+    <div class="header">
+      <h1 class="text" >النموذج الاستطلاعي</h1>
+      <p class="subtitle">يرجى ملء البيانات التالية بدقة</p>
+    </div>
+    <form action="thankU.html" method="get">
+      <fieldset>
+
+        <h1>📝 معلومات شخصية</h1>
+
+        <div class="input-group">
+          <input type="text" name="name" placeholder="أدخل اسمك الكامل" required />
+          <label>الاسم الكامل</label>
+        </div>
+
+        <div class="input-group">
+          <input type="number" name="age" placeholder="مثال: 25" min="10" max="100" required />
+          <label>العمر</label>
+        </div>
+
+        <div class="input-group">
+          <input
+            type="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+          />
+          <label>البريد الإلكتروني</label>
+        </div>
+
+        <!-- gender -->
+        <div class="gender-section">
+          <p>🎭 الجنس</p>
+          <div class="radio-group">
+            <input type="radio" name="gender" value="male" id="male" required />
+            <label for="male">ذكر</label>
+
+            <input type="radio" name="gender" value="female" id="female" required />
+            <label for="female">أنثى</label>
+          </div>
+        </div>
+
+        <!-- message -->
+        <div class="input-group">
+          <textarea name="message" placeholder="اكتب رسالتك أو اقتراحاتك هنا..." rows="6" required></textarea>
+          <label>رسالتك أو اقتراحاتك</label>
+        </div>
+
+        <button type="submit" class="submit-btn">🚀 إرسال النموذج</button>
+    </fieldset>
+    </form>
+  </body>
+</html>
